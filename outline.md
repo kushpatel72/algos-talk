@@ -18,3 +18,19 @@
 * 'n' represents the number of items
 * the search time is _linear_ in the number of items
  * potentially, we must consider every item in the list
+
+# A quick guide to common time complexities
+* O(1): ideal
+ * example: lookup in a hash map
+* O(log(n)): fast
+ * example: search in a sorted list
+* O(n): good
+ * example: search in an unsorted list
+* O(nlog(n)): slow
+ * sorting a list
+* O(n**2): bad
+ * Considering every pair
+* O(2**n): intractable
+ * Consider every subset
+* O(n!): worst-case
+ * Consider every _permutation_
