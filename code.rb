@@ -17,10 +17,20 @@ def find_min(items)
 end
 
 def find_two_min(items)
-  min1, min2 = items.take 2
+  [min1, min2] = items.take 2
+
+  min1, min2 = min2, min1 if min2 < min1
 
   items.drop(2).each do |item|
+    if item < min1
+      min2 = min1
+      min1 = item
+    elsif item < min2
+      min2 = item
+    end
   end
+
+  [min1, min2]
 end
 
 def find_k_min(k, items)
@@ -32,6 +42,8 @@ def find_k_min(k, items)
 
     min_items[max_idx] = item if item < max
   end
+
+  min_items
 end
 
 def find_closest_pair(items)
