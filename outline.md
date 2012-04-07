@@ -31,6 +31,8 @@
     swapping
   * We assume all primitive operations take _constant time_, which
     we call _O(1)_
+* If our algorithm takes _proportionally_ _n_ constant time
+  operations, we call it _O(n)_
 
 # Asymptotic behavior
 * We don't care about the _exact number_ of operations, but the
@@ -52,8 +54,25 @@
   * We care about the dominant behavior; for big enough problems,
     the lower order terms are negligible relative to higher
 	order terms
+  * Ex: when n=100, n^2=10,000
 
 # find_min
+* What _parameter_ expresses the problem size?
+* What is the time complexity?
+ * Hint: time complexity is normally in loops, since loops
+   will take longer as you loop through more stuff
+
+# find_two_min
+* What _parameter_ expresses the problem size?
+ * Still _n_; 2 is a fixed number
+* How does this compare, by wall clock, to find_min?
+* How does this compare, in Big-Oh, to find_min?
+ * Both loop over _n_ items
+ * find_two_min does about twice as much work per item
+ * But more importantly, they both do a _constant_ amount of work per
+   item
+
+# find_k_min
 
 # A quick overview to common time complexities
 * O(1): ideal
