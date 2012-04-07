@@ -46,5 +46,26 @@ def find_k_min(k, items)
   min_items
 end
 
-def find_closest_pair(items)
+def find_zero_sum_pair(items)
+  items.each_with_index do |i1, idx|
+    items.each do |i2|
+      return [i1, i2] if i1 + i2 == 0
+    end
+  end
+
+  return nil
+end
+
+def find_zero_sum_pair2(items)
+  item_hash = {}
+
+  items.each do |item|
+    item_hash[item] = true
+  end
+
+  items.each do |item|
+    return [item, -item] if item_hash[-item]
+  end
+
+  return nil
 end

@@ -73,6 +73,35 @@
    item
 
 # find_k_min
+* What _parameters_ express the problem size?
+ * Both _n_, the number of elements, and _k_, the number of mins to
+   find
+* Outer loop: still _n_ times
+* How much work _inside_ the loop?
+ * min_items.each_with_index.max hides a loop of size _k_
+* Complexity: _O(nk)_ time
+* We would say this algorithm is linear in both _n_ and _k_
+
+# find_zero_sum_pair
+* Doubly nested for loop, each considers all _n_ elements
+* Means O(n^2) time complexity
+* As a practical matter, O(n^2) is not particularly scalable,
+  quickly becomes intractable
+* Algorithms that, worst-case, consider every pair, are all O(n^2)
+* But there's a trick!
+
+# find_zero_sum_pair2
+* Two _unnested_ for loops
+* How much work is done inside the for loops?
+ * Sneak peek: _O(1)_ (amortized) work
+* Total work: _O(n)_
+
+# Data structures
+* The most primitive operations are really basic
+* Data structures are the bigger building blocks
+ * Ex: vector, list, hash and tree maps, heap
+* Those are all the data structures you need to know for interviews
+* On the job is even easier: heaps rarely come up
 
 # A quick overview to common time complexities
 * O(1): ideal
