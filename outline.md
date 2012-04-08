@@ -103,6 +103,17 @@
 * Those are all the data structures you need to know for interviews
 * On the job is even easier: heaps rarely come up
 
+# Vectors and lists
+* Operations:
+ * index: find the _i_th item
+ * push_front: put an element on the front
+ * push_back: push an element to the back
+ * insert: put an element at the _i_th index
+ * find: find an item in the vector/list
+* Vectors/lists have different time complexities for these operations
+* You'll choose one over the other based on what you're going to do
+  with it
+
 # A quick overview to common time complexities
 * O(1): ideal
  * example: lookup in a hash map
