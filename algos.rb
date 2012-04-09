@@ -10,7 +10,7 @@ def find_min(items)
   min_item = items[0]
 
   items.drop(1).each do |item|
-    min = min min_item, item
+    min_item = min min_item, item
   end
 
   min_item
