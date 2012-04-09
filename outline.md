@@ -3,6 +3,23 @@
 * On the job, knowledge of algorithms beyond the basics is unnecessary
 * It does tend to be a common staple of eng interviews
 
+# Typical Interview process
+1. Phone screen with recruiter
+2. Maybe two technical phone screens
+3. Often a coding test
+4. In office interviews
+
+# Algorithms interview advice
+* Often there's an obvious 'naive' solution
+* I start by describing that, in case I crash and burn trying to think
+  of something better
+* I then start thinking about how the constraints of this particular
+  problem might let me do better
+* Talk through the problem so the interviewer sees what you're
+  thinking
+* These problems are expected to be tough; the interviewer will talk
+  to you as you discuss the problem, so listen for hints
+
 # find_item
 * Find an item in a list
 * See solution
