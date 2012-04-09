@@ -201,6 +201,11 @@
 * Hash calculation takes _O(1)_, bucket lookup takes _O(1)_
 * On average, bucket contains _load_ items, which is _average_ _O(1)_
 
+# Sets vs maps
+* Both a tree set and hash set can be transformed into a map
+* Maps keys to values
+* Store the keys as usual, and keep an extra reference to the value
+
 # A quick overview to common time complexities
 * O(1); "constant" time; ideal; ex: lookup in a hash map
 * O(log(n)); "logarithmic" time; fast; ex: search in a sorted list
