@@ -108,11 +108,24 @@
  * index: find the _i_th item
  * push\_front: put an element on the front
  * push\_back: push an element to the back
- * insert: put an element at the _i_th index
- * find: find an item in the vector/list
 * Vectors/lists have different time complexities for these operations
 * You'll choose one over the other based on what you're going to do
   with it
+
+# List
+* A list is a chain of _nodes_
+ * Each node holds an item, and possibly a reference to a next node
+* You iterate through the list by starting from the _head_, or first
+  node, and following the references
+* index: takes time worst-case _O(n)_ to visit the last element,
+  because you must visit every node
+* push\_front: _O(1)_, since you just create a new head node, and link
+  it to the old head
+* push\_back: it already takes _O(n)_ time to traverse to the end
+ * There's a list variant that holds a reference to both front and
+   back of the list, in which case both push\_front and push\_back
+   take _O(1)_; index still is _O(n)_ (why?)
+* Question: how would you insert an item into the middle of a list?
 
 # A quick overview to common time complexities
 * O(1); "constant" time; ideal; ex: lookup in a hash map
