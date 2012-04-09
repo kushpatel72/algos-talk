@@ -127,6 +127,32 @@
    take _O(1)_; index still is _O(n)_ (why?)
 * Question: how would you insert an item into the middle of a list?
 
+# Vector
+* index was slow for lists because we had to follow every link
+* A vector holds all its items in a single block of memory (_store_),
+  one next to the other
+* Each entry has a fixed width, or _size_, which is the number of
+  bytes to store the object
+* If the store starts at memory address _p_, then the _i_th element is
+  at address _p + (i * size(item))_
+* Any address can be loaded in _O(1)_ time, so index is _O(1)_
+* It's not vital to know the details of a vector implementation, but
+  a little understanding will help you remember its performance
+
+# Vector mutations
+* Because of how computers work, it is difficult to resize the store
+ * We have to allocate an entirely new store, then copy everything
+   over
+* Resize has what time complexity?
+* If the _store_ is at full capacity, and we want to push\_front or
+  push\_back, we have to do a resize
+* To avoid resizes, it's typical to _double_ the store size on every
+  resize
+* So if we have to copy _n_ elements on this resize, we increase the
+  store size to _2n_, which buys us another _n_ insertions before the
+  next resize
+* Which brings us to _amortized_ time complexity: which is _O(1)_
+
 # A quick overview to common time complexities
 * O(1); "constant" time; ideal; ex: lookup in a hash map
 * O(log(n)); "logarithmic" time; fast; ex: search in a sorted list
