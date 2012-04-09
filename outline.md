@@ -153,6 +153,36 @@
   next resize
 * Which brings us to _amortized_ time complexity: which is _O(1)_
 
+# Sets
+* A set has three basic operations:
+ * Insertion
+ * Lookup
+ * Iteration
+* Two major kinds: tree set and hash set
+
+# Tree set
+* A tree is like a list, but a _parent_  can have multiple _children_
+* Nodes with no children are called _leaves_; the parent of everything
+  is the _root_
+* The relationship between parent-child and siblings defines the tree
+  properties
+* In a tree set, each parent has at most two children; a _left_ and
+  _right_ child
+* The left child must be less than the parent, the right child is
+  greater than the parent
+* How would you search/insert into the tree?
+
+# Tree set performance
+* Operations are defined by the _depth_ of the tree
+* Trivial worst case: every node has one child, _O(n)_ depth
+* Best case: every node has two children; how deep?
+* _O(log(n))_
+ * algorithms that consider half the items at each step are typically
+   logarithmic
+* Self-balancing trees do some magic to ensure the tree depth is
+  _O(log(n))_
+ * you don't need to know how these work; just that they exist
+
 # A quick overview to common time complexities
 * O(1); "constant" time; ideal; ex: lookup in a hash map
 * O(log(n)); "logarithmic" time; fast; ex: search in a sorted list
