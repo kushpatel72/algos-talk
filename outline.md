@@ -183,6 +183,24 @@
   _O(log(n))_
  * you don't need to know how these work; just that they exist
 
+# Hash set
+* A _hash function_ maps an item to an almost random number
+ * The hash id is not guaranteed unique, but hash _collisions_ should
+   be rare
+* A hash set has a store, each element in the store is called a
+  _bucket_
+* Values are mapped to buckets by their hash id, _modulo_ the size of
+  the store
+* Buckets may contain more than one item, if hashes collide
+* As we add more items buckets fill up
+
+# Hash set performance
+* It is typical to keep the hash set at a fix _load_, or num\_items /
+  num\_buckets
+* Periodic resizes take _O(n)_ time, but we repeat the doubling trick
+* Hash calculation takes _O(1)_, bucket lookup takes _O(1)_
+* On average, bucket contains _load_ items, which is _average_ _O(1)_
+
 # A quick overview to common time complexities
 * O(1); "constant" time; ideal; ex: lookup in a hash map
 * O(log(n)); "logarithmic" time; fast; ex: search in a sorted list
