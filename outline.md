@@ -62,27 +62,27 @@
  * Hint: time complexity is normally in loops, since loops
    will take longer as you loop through more stuff
 
-# find_two_min
+# find\_two\_min
 * What _parameter_ expresses the problem size?
  * Still _n_; 2 is a fixed number
 * How does this compare, by wall clock, to find_min?
 * How does this compare, in Big-Oh, to find_min?
  * Both loop over _n_ items
- * find_two_min does about twice as much work per item
+ * find\_two\_min does about twice as much work per item
  * But more importantly, they both do a _constant_ amount of work per
    item
 
-# find_k_min
+# find\_k\_min
 * What _parameters_ express the problem size?
  * Both _n_, the number of elements, and _k_, the number of mins to
    find
 * Outer loop: still _n_ times
 * How much work _inside_ the loop?
- * min_items.each_with_index.max hides a loop of size _k_
+ * min\_items.each\_with\_index.max hides a loop of size _k_
 * Complexity: _O(nk)_ time
 * We would say this algorithm is linear in both _n_ and _k_
 
-# find_zero_sum_pair
+# find\_zero\_sum\_pair
 * Doubly nested for loop, each considers all _n_ elements
 * Means O(n^2) time complexity
 * As a practical matter, O(n^2) is not particularly scalable,
@@ -90,7 +90,7 @@
 * Algorithms that, worst-case, consider every pair, are all O(n^2)
 * But there's a trick!
 
-# find_zero_sum_pair2
+# find\_zero\_sum\_pair2
 * Two _unnested_ for loops
 * How much work is done inside the for loops?
  * Sneak peek: _O(1)_ (amortized) work
@@ -106,8 +106,8 @@
 # Vectors and lists
 * Operations:
  * index: find the _i_th item
- * push_front: put an element on the front
- * push_back: push an element to the back
+ * push\_front: put an element on the front
+ * push\_back: push an element to the back
  * insert: put an element at the _i_th index
  * find: find an item in the vector/list
 * Vectors/lists have different time complexities for these operations
