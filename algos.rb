@@ -3,7 +3,7 @@ def find_item(target, items)
     return idx if item == target
   end
 
-  return -1
+  -1
 end
 
 def find_min(items)
@@ -53,7 +53,7 @@ def find_zero_sum_pair(items)
     end
   end
 
-  return nil
+  nil
 end
 
 def find_zero_sum_pair2(items)
@@ -67,5 +67,5 @@ def find_zero_sum_pair2(items)
     return [item, -item] if item_hash[-item]
   end
 
-  return nil
+  nil
 end
