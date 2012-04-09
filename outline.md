@@ -115,17 +115,11 @@
   with it
 
 # A quick overview to common time complexities
-* O(1): ideal
- * example: lookup in a hash map
-* O(log(n)): fast
- * example: search in a sorted list
-* O(n): good
- * example: search in an unsorted list
-* O(nlog(n)): slow
- * sorting a list
-* O(n**2): bad
- * Considering every pair
-* O(2**n): intractable
- * Consider every subset
-* O(n!): worst-case
- * Consider every _permutation_
+* O(1); "constant" time; ideal; ex: lookup in a hash map
+* O(log(n)); "logarithmic" time; fast; ex: search in a sorted list
+ * consider half the items each time
+* O(n); good; ex: search in an unsorted list, consider every _item_
+* O(nlog(n)); slow; ex: sorting a list
+* O(n**2); "quadratic" time; bad; ex: considering every _pair_
+* O(2**n); "exponential" time; intractable; ex: consider every _subset_
+* O(n!); "factorial" time; worst-case; ex: consider every _permutation_
